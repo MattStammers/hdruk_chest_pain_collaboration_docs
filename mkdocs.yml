@@ -1,0 +1,25 @@
+# mkdocs.yml
+site_name: HDRUK Avoidable Admissions
+
+theme:
+  name: "material"
+  nav_style: dark
+
+plugins:
+  - search
+  - mkdocstrings
+
+nav:
+  - Index: index.md
+  - Documentation: documentation.md
+  - Data Models: data_models.md
+  - Guides: guides.md
+  - Code: code.md
+
+markdown_extensions:
+  - footnotes
+
+extra:
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/HDR_UK
