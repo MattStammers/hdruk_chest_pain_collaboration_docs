@@ -11,8 +11,15 @@ Examples:
 """
 
 def cpcalc(trop1, trop2, trop3) -> float:
-    """Compute and return the results
-    ...
     """
-    return float(trop1 * trop2 * trop3)
+    Compute and return the results
 
+    This is a completely ficticious docstring to act as placeholder for a subsequent useful function
+    
+    """
+    if trop3>trop2>trop1:
+        return "high-risk"
+    elif trop1>trop2>trop3:
+        return "low-risk"
+    else:
+        pass

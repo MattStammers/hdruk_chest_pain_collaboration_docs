@@ -1,5 +1,5 @@
 # mkdocs.yml
-site_name: HDRUK Avoidable Admissions
+site_name: HDRUK Chest Pain
 
 theme:
   name: "material"
