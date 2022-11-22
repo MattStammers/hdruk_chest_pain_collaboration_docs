@@ -1,0 +1,644 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>Data Models - HDRUK Avoidable Admissions</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.472b142f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.08040f6c.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#data-models" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="HDRUK Avoidable Admissions" class="md-header__button md-logo" aria-label="HDRUK Avoidable Admissions" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HDRUK Avoidable Admissions
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Data Models
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="HDRUK Avoidable Admissions" class="md-nav__button md-logo" aria-label="HDRUK Avoidable Admissions" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    HDRUK Avoidable Admissions
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentation/" class="md-nav__link">
+        Documentation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Data Models
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Data Models
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#data-models" class="md-nav__link">
+    Data Models
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linked-individual-patient-level-data" class="md-nav__link">
+    Linked individual patient level data
+  </a>
+  
+    <nav class="md-nav" aria-label="Linked individual patient level data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#essential-data" class="md-nav__link">
+    Essential data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#desirable-data" class="md-nav__link">
+    Desirable data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aspirational-data" class="md-nav__link">
+    Aspirational data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-data-dictionary" class="md-nav__link">
+    Full Data Dictionary
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/" class="md-nav__link">
+        Guides
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../code/" class="md-nav__link">
+        Code
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#data-models" class="md-nav__link">
+    Data Models
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linked-individual-patient-level-data" class="md-nav__link">
+    Linked individual patient level data
+  </a>
+  
+    <nav class="md-nav" aria-label="Linked individual patient level data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#essential-data" class="md-nav__link">
+    Essential data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#desirable-data" class="md-nav__link">
+    Desirable data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aspirational-data" class="md-nav__link">
+    Aspirational data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-data-dictionary" class="md-nav__link">
+    Full Data Dictionary
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Data Models</h1>
+
+<h2 id="data-models">Data Models</h2>
+<p>This area contains the key documentation pertaining to the desired data models for the project. </p>
+<p>Below is a summary of the key items for the project</p>
+<h3 id="linked-individual-patient-level-data">Linked individual patient level data</h3>
+<h4 id="essential-data">Essential data</h4>
+<ol>
+<li>Demographics </li>
+<li>Age (number [%] &lt;40 years, 40-49, 50-59, 60-69, 70-79, 80-89, &gt;90 years)</li>
+<li>Sex (number [%] women)</li>
+<li>Laboratory data</li>
+<li>First cardiac troponin concentration (number [%] &lt;5 ng/L, 5 ng/L to URL, above URL)</li>
+<li>Maximum cardiac troponin concentration in 24 hours (number [%] &lt;5 ng/L, 5 ng/L to URL, above URL)</li>
+<li>Serial cardiac troponin measurments (number [%] 1, 2, 3 or more)</li>
+<li>Index diagnosis</li>
+<li>SNOMED codes for Emergency Department (provisional diagnosis)</li>
+<li>ICD-10 codes for hospital discharge (final diagnosis)</li>
+<li>Outcomes</li>
+<li>Proportion discharged directly from Emergency Department (number [%])</li>
+<li>Myocardial infarction or cardiac death 30 days from discharge (number [%])</li>
+<li>Duration of index hospital stay (number [%])(&lt;2 hours, 2-4 hours, 5-24 hours, 25-48 hours, 49-72 hours, 73-96 hours, 97-120 hours, 121-144 hours, &gt;145 hours)</li>
+<li>Any non-elective reattendance within 30 days of discharge (number [%])</li>
+</ol>
+<h4 id="desirable-data">Desirable data</h4>
+<ol>
+<li>Demographics </li>
+<li>Ethnicity (number [%] of patients stratified by census ethnic grouping: White, Mixed or multiple ethnic groups, Asian or Asian British, Black or Black Caribbean or African, Other, Unknown)</li>
+<li>Social and economic deprivation (number [%] by Scottish Index of Multiple Deprivation [SIMD] score in Scotland or Townsend Deprivation score in England by quintiles)</li>
+<li>Cardiovascular risk factors from GP Read or SNOMED codes </li>
+<li>Smoking status (number [%] current, former, non, e-cigarette)</li>
+<li>Diabetes mellitus (number [%] yes or no)</li>
+<li>Hypertension (number [%] yes or no)</li>
+<li>Hyperlipidemia (number [%], prescription of a lipid lowering therapy)</li>
+<li>Past medical history from HES or SMR01 and or GP Read codes (lifetime look back)</li>
+<li>Previous myocardial infarction (number [%], yes or no)</li>
+<li>Previous coronary revascularisation (number [%], yes or no)</li>
+<li>Heart failure (number [%], yes or no)</li>
+<li>Cerebrovascular disease (number [%], yes or no)</li>
+<li>Laboratory data</li>
+<li>First estimated glomerular filtration rate (number [%] &lt;30, 30 to 60, above 60)</li>
+<li>Outcomes</li>
+<li>Myocardial infarction within 30 days of discharge (number [%])</li>
+<li>Cardiac death within 30 days of discharge (number [%])</li>
+<li>Cardiovascular death within 30 days of discharge (number [%])</li>
+<li>All cause death within 30 days of discharge (number [%])</li>
+<li>Coronary angiography during index presentation or within 30 days of discharge (number [%])</li>
+<li>PCI or CABG during index presentation or within 30 days of discharge (number [%])</li>
+</ol>
+<h4 id="aspirational-data">Aspirational data</h4>
+<ol>
+<li>Investigations</li>
+<li>Electrocardiogram (number [%])</li>
+<li>Exercise tolerance test (number [%])</li>
+<li>CT coronary angiogram (number [%])</li>
+<li>Echocardiogram (number [%])</li>
+<li>Treatment</li>
+<li>New prescription for anti-platelet drug (number [%])</li>
+<li>New prescription for lipid lowering therapy (number [%]) </li>
+<li>Follow up</li>
+<li>GP attendance within 30 days of discharge (number [%]) </li>
+<li>Outpatient appointment within 30 days (number [%])</li>
+</ol>
+<h3 id="full-data-dictionary">Full Data Dictionary</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Measure    Source  Definition  Codelists / Rules</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Attendance with possible myocardial infarction Laboratory data Measured hs-cTn within 24 hours of Emergency admission (ED or AMRU that accepts urgent assessments) Classification by presence or absence of myocardial injury (any hs-cTn &gt;99th centile upper reference limit [URL] within 24 hours of attendance) and into risk groups as low (&lt;5 ng/L) or intermediate (5 ng/L to URL) risk in those without myocardial injury.Risk factor – hypertension    Primary and secondary care  HDR UK phenotype – distinguishes hypertension</td>
+</tr>
+<tr>
+<td align="left">Risk factor - ethnicity    Primary and secondary care  Combined sourcing of any record of ethnicity using Census high-level grouping   Classification: White</td>
+</tr>
+<tr>
+<td align="left">Risk factor – diabetes Primary and secondary care  HDR UK phenotype – any code (no time limit) https://phenotypes.healthdatagateway.org/phenotypes/PH152/version/304/detail/</td>
+</tr>
+<tr>
+<td align="left">History of myocardial infarction   Primary and secondary care  HDR UK phenotype – any code (no time limit) https://phenotypes.healthdatagateway.org/phenotypes/PH215/version/430/detail/</td>
+</tr>
+<tr>
+<td align="left">History of heart failure   Primary and secondary care  HDR UK phenotype – any code (no time limit) https://phenotypes.healthdatagateway.org/phenotypes/PH182/version/364/detail/</td>
+</tr>
+<tr>
+<td align="left">History of cerebrovascular disease Primary and secondary care  Any of 2 HDR UK phenotypes (stroke or ischaemic stroke) – any code (no time limit)  (https://phenotypes.healthdatagateway.org/phenotypes/PH85/version/170/detail/) (https://phenotypes.healthdatagateway.org/phenotypes/PH56/version/112/detail/History of coronary revascularisation)  Secondary care OPCS or local cardiac procedure database Lookback for any prior code (no time limit) PCI procedure: K49</td>
+</tr>
+<tr>
+<td align="left">Coronary bypass grafting: K40.</td>
+</tr>
+<tr>
+<td align="left">Duration of stay   Secondary care  Time (hours) from attendance to discharge or death  Discharge is defined by time leaving ED discharge if not admitted</td>
+</tr>
+<tr>
+<td align="left">Any reattendance   Secondary care  Any non-elective attendance to either an Emergency Department or hospital inpatient episode N/A</td>
+</tr>
+<tr>
+<td align="left">Reattendance with myocardial infarction    Secondary care  Any hospital episode with relevant ICD-10 code in position 1 or 2 of admission record   ICD-10 codes: I21 and I22 including subclassifications</td>
+</tr>
+<tr>
+<td align="left">Cardiac death  Death registry  Any recorded death including relevant ICD-10 code in position 1 or 2 of record  ICD-10 codes: I05-I09</td>
+</tr>
+<tr>
+<td align="left">Cardiovascular death   Death registry  Any recorded death including relevant ICD-10 code in position 1 or 2 of death record    ICD-10 codes: I00-I99</td>
+</tr>
+<tr>
+<td align="left">All-cause death    Death registry  Any recorded death including date of death  N/A</td>
+</tr>
+<tr>
+<td align="left">Coronary revascularisation Secondary care OPCS codes and/or local cardiac procedure database       Angiography: K63.1</td>
+</tr>
+<tr>
+<td align="left">PCI procedure: K49</td>
+</tr>
+<tr>
+<td align="left">Coronary bypass grafting: K40.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../documentation/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Documentation" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Documentation
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../guides/" class="md-footer__link md-footer__link--next" aria-label="Next: Guides" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Guides
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/HDR_UK" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6c3db9e.min.js"></script>
+      
+    
+  </body>
+</html>
