@@ -13,7 +13,7 @@
     
     
       
-        <title>Code - HDRUK Avoidable Admissions</title>
+        <title>Code - HDRUK Chest Pain</title>
       
     
     
@@ -78,7 +78,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="HDRUK Avoidable Admissions" class="md-header__button md-logo" aria-label="HDRUK Avoidable Admissions" data-md-component="logo">
+    <a href=".." title="HDRUK Chest Pain" class="md-header__button md-logo" aria-label="HDRUK Chest Pain" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -91,7 +91,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            HDRUK Avoidable Admissions
+            HDRUK Chest Pain
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -164,13 +164,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="HDRUK Avoidable Admissions" class="md-nav__button md-logo" aria-label="HDRUK Avoidable Admissions" data-md-component="logo">
+    <a href=".." title="HDRUK Chest Pain" class="md-nav__button md-logo" aria-label="HDRUK Chest Pain" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
-    HDRUK Avoidable Admissions
+    HDRUK Chest Pain
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -423,8 +423,8 @@ reference for the technical implementation of the
 
   <div class="doc doc-contents ">
   
-      <p>Compute and return the results
-...</p>
+      <p>Compute and return the results</p>
+<p>This is a completely ficticious docstring to act as placeholder for a subsequent useful function</p>
 
       <details class="quote">
         <summary>Source code in <code>modules\chest_pain\calculator.py</code></summary>
@@ -432,11 +432,27 @@ reference for the technical implementation of the
 <span class="normal">14</span>
 <span class="normal">15</span>
 <span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">cpcalc</span><span class="p">(</span><span class="n">trop1</span><span class="p">,</span> <span class="n">trop2</span><span class="p">,</span> <span class="n">trop3</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Compute and return the results</span>
-<span class="sd">    ...</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">cpcalc</span><span class="p">(</span><span class="n">trop1</span><span class="p">,</span> <span class="n">trop2</span><span class="p">,</span> <span class="n">trop3</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Compute and return the results</span>
+
+<span class="sd">    This is a completely ficticious docstring to act as placeholder for a subsequent useful function</span>
+
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">trop1</span> <span class="o">*</span> <span class="n">trop2</span> <span class="o">*</span> <span class="n">trop3</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">trop3</span><span class="o">&gt;</span><span class="n">trop2</span><span class="o">&gt;</span><span class="n">trop1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;high-risk&quot;</span>
+    <span class="k">elif</span> <span class="n">trop1</span><span class="o">&gt;</span><span class="n">trop2</span><span class="o">&gt;</span><span class="n">trop3</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;low-risk&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">pass</span>
 </code></pre></div></td></tr></table></div>
       </details>
   </div>
