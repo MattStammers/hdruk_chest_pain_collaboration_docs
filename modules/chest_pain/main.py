@@ -1,18 +1,11 @@
 # import pandas 
-from pandas import DataFrame, concat
-from params import phentoypes_dictionary
-from utilities.processing_steps import mapper
+from params import phentoypes_dictionary, icd10_dictionary, opcs_dictionary
+from utilities.dd_generator import *
 
 def main():
-    df_out = DataFrame()
-    for key in phentoypes_dictionary.keys():
-        #try:
-        aux = mapper(key)
-        df_out = concat([df_out,aux])
-        #except:
-          #  pass
-
-    df_out.to_csv("./hdruk_chest_pain_collaboration_docs/datafiles/snomed_phenotypes.csv")
+    generate_dd_pheno(phentoypes_dictionary,"./datafiles/mappings_icd10.csv")
+    generate_dd_icd10(icd10_dictionary,"./datafiles/mappings_icd10.csv")
+    generate_dd_opcs(opcs_dictionary,"./datafiles/mappings_opcs.csv")
 
 if __name__ == '__main__':
     main()
