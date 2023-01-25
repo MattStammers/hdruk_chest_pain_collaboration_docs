@@ -16,3 +16,4 @@ urllib
 requests
 sys
 os
+black
